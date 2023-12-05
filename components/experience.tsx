@@ -1,6 +1,6 @@
 "use client";
 
-import React from 'react'
+import React, { useContext } from 'react'
 import SectionHeading from './sections-heading';
 import {
     VerticalTimeline,
@@ -10,9 +10,12 @@ import 'react-vertical-timeline-component/style.min.css';
 import { experiencesData } from '@/lib/data';
 import { useSectionInView } from '@/lib/hooks';
 import { motion } from 'framer-motion';
+import { useTheme } from '@/context/theme-context';
 
 export default function Experience() {
     const { ref } = useSectionInView("Experience");
+    const {theme} = useTheme();
+
   return (
     <motion.section id='experience' 
     ref={ref}
@@ -42,23 +45,27 @@ export default function Experience() {
                 
                     
                 contentStyle={{
-                        background:"#f3f4f6",
-                        boxShadow: "none",
-                        border: "1px solid rgba(0, 0, 0, 0.05)",
-                        textAlign: "left",
-                        padding: "1.3rem 2rem",
-                        maxWidth:"700px",
-                                        
-                      }}
-                      contentArrowStyle={{
-                        borderRight:"0.4rem solid #9ca3af" ,
-                      }}
-                      date={item.date}
-                      icon={item.icon}
-                      iconStyle={{
-                        background: "white",
-                        fontSize:"1.5rem",
-                      }}>
+                    background:
+                      theme === "light" ? "#f3f4f6" : "rgba(255, 255, 255, 0.05)",
+                    boxShadow: "none",
+                    border: "1px solid rgba(0, 0, 0, 0.05)",
+                    textAlign: "left",
+                    padding: "1.3rem 2rem",
+                    maxWidth:"650px"
+                  }}
+                  contentArrowStyle={{
+                    borderRight:
+                      theme === "light"
+                        ? "0.4rem solid #9ca3af"
+                        : "0.4rem solid rgba(255, 255, 255, 0.5)",
+                  }}
+                  date={item.date}
+                  icon={item.icon}
+                  iconStyle={{
+                    background:
+                      theme === "light" ? "white" : "rgba(255, 255, 255, 0.15)",
+                    fontSize: "1.5rem",
+                  }}>
                     <h3 className='font-semibold capitalize '>{item.title}</h3>
                     <p className="font-normal !mt-0">{item.location}</p>
                     <p className='text-gray-700'>{item.description}</p>
