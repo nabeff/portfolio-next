@@ -15,7 +15,7 @@ export default function Contact() {
     <motion.section
       id="contact"
       ref={ref}
-      className="mb-20 sm:mb-28 w-[min(100%,38rem)] text-center"
+      className="relative mb-20 sm:mb-28 w-[min(100%,38rem)] text-center"
       initial={{
         opacity: 0,
       }}
@@ -31,10 +31,10 @@ export default function Contact() {
     >
       <SectionHeading>Contact me</SectionHeading>
 
-      <div className="mt-10"><p className="text-gray-700 -mt-6 dark:text-white/80">
+      <div className="mt-10"><p className=" text-gray-700 -mt-6 dark:text-white/90">
         Please contact me directly at{" "}
-        <a className="underline" href="mailto:example@gmail.com">
-          example@gmail.com
+        <a className="underline font-bold" href="mailto:example@gmail.com">
+          neffina8@gmail.com
         </a>{" "}
         or through this form.
       </p></div>
@@ -53,7 +53,9 @@ export default function Contact() {
         }}
       >
         <input
-          className="h-14 px-4 rounded-lg borderBlack dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
+          className="h-14 px-4 rounded-lg 
+          borderBlack dark:bg-white/20 dark:bg-opacity-80 
+          dark:focus:bg-opacity-90 transition-all dark:outline-none placeholder:text-white/80 text-white/90"
           name="senderEmail"
           type="email"
           required
@@ -61,14 +63,24 @@ export default function Contact() {
           placeholder="Your email"
         />
         <textarea
-          className="h-52 my-3 rounded-lg borderBlack p-4 dark:bg-white dark:bg-opacity-80 dark:focus:bg-opacity-100 transition-all dark:outline-none"
+        
+          className="h-52 my-3 rounded-lg borderBlack p-4
+          dark:bg-white/20 dark:bg-opacity-80 
+           dark:focus:bg-opacity-90 transition-all dark:outline-none
+           placeholder:text-white/80 text-white/90"
           name="message"
           placeholder="Your message"
           required
           maxLength={5000}
+         
+          
         />
         <SubmitBtn />
       </form>
+      <div className="absolute top-1/2 left-1 transform blur-[13rem] -translate-x-1/2 
+      -translate-y-1/2 rounded-full bg-[#0926e0]  w-[13rem] h-[13rem] -z-10 dark:bg-[#540094] "></div>
+      <div className="absolute top-1/2 left-1/2 transform blur-[13rem] -translate-x-1/2 
+      -translate-y-1/2 rounded-full bg-[#00ba9e]  w-[13rem] h-[13rem] -z-10 dark:bg-[#e00966] "></div>
     </motion.section>
   );
 }

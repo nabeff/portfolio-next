@@ -9,3 +9,6 @@ html {
 .borderBlack{
     @apply border border-black/10;
 }
+textarea {
+    resize: none;
+  }

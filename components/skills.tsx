@@ -27,14 +27,14 @@ export default function Skills() {
     <section
       id="skills"
       ref={ref}
-      className="mb-28 mt-28  max-w-[53rem] scroll-mt-28 text-center sm:mb-40"
+      className="relative mb-28 mt-28  max-w-[53rem] scroll-mt-28 text-center sm:mb-40"
     >
       <SectionHeading>My skills</SectionHeading>
-      <ul className="flex flex-wrap justify-center gap-2 text-lg text-gray-800">
+      <ul className="relative  flex flex-wrap justify-center gap-2 text-lg text-gray-800 ">
         {skillsData.map((skill, index) => (
           <motion.li
-            className="bg-white borderBlack rounded-xl px-5 py-3
-             dark:bg-white/10 dark:text-white/80"
+            className="bg-white borderBlack rounded-xl px-5 py-3 
+             dark:bg-white/10 dark:text-white/80  "
             key={index}
             variants={fadeInAnimationVariants}
             initial="initial"
@@ -48,6 +48,10 @@ export default function Skills() {
           </motion.li>
         ))}
       </ul>
+      <div className="absolute top-1/2 left-1 transform blur-[14rem] -translate-x-1/2 
+      -translate-y-1/2 bg-[#4aa302] rounded-full w-[13rem] h-[12rem] -z-10 dark:bg-[#ff0000]"></div>
+      <div className="absolute top-1/2 right-1 transform blur-[13rem] -translate-x-1/2 
+      -translate-y-1/2 rounded-full bg-[#e009e0] w-[10rem] h-[10rem] -z-10 dark:bg-[#e009e0] "></div>
     </section>
   );
 }

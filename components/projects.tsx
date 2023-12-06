@@ -12,7 +12,7 @@ export default function Projects() {
 
 
   return (
-    <section ref={ref} id="projects" className='scroll-mt-28 '>
+    <section ref={ref} id="projects" className='relative scroll-mt-28 '>
          <SectionHeading>Projects</SectionHeading>
          <div className="grid grid-cols-1 gap-6 xl:grid-cols-2">
           {
@@ -23,6 +23,8 @@ export default function Projects() {
             ))
           }
          </div>
+         <div className="absolute top-1/2 left-1/2 transform blur-[13rem] -translate-x-1/2 
+      -translate-y-1/2 bg-[#cea5fa] rounded-full w-[20rem] h-[20rem]-z-10"></div>
     </section>
   );
 }

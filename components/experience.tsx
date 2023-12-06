@@ -19,7 +19,7 @@ export default function Experience() {
   return (
     <motion.section id='experience' 
     ref={ref}
-    className='scroll-mt-28 mb-28   sm:mb-40'
+    className='relative scroll-mt-28 mb-28   sm:mb-40'
     initial={{
         opacity:0
     }}
@@ -68,12 +68,17 @@ export default function Experience() {
                   }}>
                     <h3 className='font-semibold capitalize '>{item.title}</h3>
                     <p className="font-normal !mt-0">{item.location}</p>
-                    <p className='text-gray-700'>{item.description}</p>
+                    <p className='text-gray-700 dark:text-white/60'>{item.description}</p>
+                    
+                    
                 </VerticalTimelineElement>
                     </React.Fragment>
                 ))
             }
         </div>
+        <div className="absolute top-1/2 left-1 transform blur-[16rem] -translate-x-1/2 
+      -translate-y-1/2 bg-[#860abf] rounded-full w-[15rem] h-[15rem] -z-10 dark:bg-[#860abf] "></div>
+        
     </motion.section>
         )
 }
