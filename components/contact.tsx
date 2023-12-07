@@ -55,7 +55,8 @@ export default function Contact() {
         <input
           className="h-14 px-4 rounded-lg 
           borderBlack dark:bg-white/20 dark:bg-opacity-80 
-          dark:focus:bg-opacity-90 transition-all dark:outline-none placeholder:text-white/80 text-white/90"
+          dark:focus:bg-opacity-90 transition-all  dark:outline-none bg:placeholder:text-gray-900/80 text-gray-900
+          dark:placeholder:text-white/80 dark:text-white/90"
           name="senderEmail"
           type="email"
           required
@@ -67,7 +68,8 @@ export default function Contact() {
           className="h-52 my-3 rounded-lg borderBlack p-4
           dark:bg-white/20 dark:bg-opacity-80 
            dark:focus:bg-opacity-90 transition-all dark:outline-none
-           placeholder:text-white/80 text-white/90"
+           bg:placeholder:text-gray-900/80 text-gray-900
+           dark:placeholder:text-white/80 dark:text-white/90"
           name="message"
           placeholder="Your message"
           required

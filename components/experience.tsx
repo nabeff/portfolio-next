@@ -78,6 +78,8 @@ export default function Experience() {
         </div>
         <div className="absolute top-1/2 left-1 transform blur-[16rem] -translate-x-1/2 
       -translate-y-1/2 bg-[#860abf] rounded-full w-[15rem] h-[15rem] -z-10 dark:bg-[#860abf] "></div>
+      <div className="absolute top-1/2 right-2 transform blur-[14rem] -translate-x-1/2 
+      -translate-y-1/2 bg-[#000594] rounded-full w-[13rem] h-[12rem] -z-10 dark:bg-[#000594]"></div>
         
     </motion.section>
         )
