@@ -6,7 +6,7 @@ import React, { createContext, useContext, useState } from 'react';
 
 
 type ActiveSectionContextProviderProps = {
-    Children: React.ReactNode;
+    children: React.ReactNode;
 };
 
 type ActiveSectionContextType = {
