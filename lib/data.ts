@@ -48,7 +48,7 @@ export const experiencesData = [
     title: "Front-End Developer",
     location: "Meknes",
     description:
-      "I worked as a front-end developer for 1 year. I also upskilled to the full stack in the pas years.",
+      "I worked as a front-end developer for 1 year. I also upskilled to the full stack in the past years.",
     icon: React.createElement(CgWorkAlt),
     date: "2022 - 2023",
    
